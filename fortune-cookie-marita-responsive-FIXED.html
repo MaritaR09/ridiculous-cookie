@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seriously Ridiculous Fortune Cookie</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fef8f2;
+      text-align: center;
+      padding: 5vw;
+      margin: 0;
+    }
+    #cookie-img {
+      width: 60%;
+      max-width: 320px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    #fortune {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #333;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+    button {
+      background-color: #e0b562;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      background-color: #cf9f49;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-size: 1.6em;">Crack Your Seriously Ridiculous Fortune Cookie!</h1>
+  <img id="cookie-img" src="https://maritar09.github.io/ridiculous-cookie/images/cookie-image.png" alt="Fortune Cookie" onclick="showFortune()">
+  <div id="fortune"></div>
+  <button onclick="showFortune()">Give me another!</button>
+
+  <script>
+    const fortunes = [
+      "Your destiny just yawned. Give it a minute before it kicks in.",
+      "If nothing makes sense today – congratulations, you're on the right path.",
+      "Your soul needs rest. And maybe Netflix.",
+      "Spiritual awakening? Great. But first: socks.",
+      "The Universe supports you. But also sometimes laughs at you.",
+      "Don’t look for signs. Your dog just farted – that’s mystical enough.",
+      "Your life is exactly where it’s supposed to be. Even if nobody knows where that is.",
+      "If you’re confused, take a shower. That’s usually how epic eras begin.",
+      "Your soul knows the way. It just prefers shortcuts through mud.",
+      "Being tired doesn’t mean you’re not evolving. It means you’re human. Congrats.",
+      "You don’t need more light. You need more sleep.",
+      "Your vibes are high. But coffee still wins.",
+      "You’re not late. The Universe is just running behind too.",
+      "The answers are within you. But they’re currently on a break.",
+      "Your transformation is napping. Please do not disturb.",
+      "If no one understands you – maybe you’re a metaphor.",
+      "Spiritual leap? Sure. But eat something first.",
+      "Before cleansing your karma, maybe just tidy your room.",
+      "Your inner child just fell asleep with a cat on its belly.",
+      "You are enough. But if you want – you can also be funny."
+    ];
+
+    function showFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      document.getElementById('fortune').textContent = fortunes[randomIndex];
+    }
+  </script>
+</body>
+</html>
